@@ -1,0 +1,11 @@
+[
+  {
+    "id": "ilovepdf",
+    "url": "https://www.ilovepdf.com/zh-cn",
+    "name": "iLovePDF",
+    "icon": "https://www.ilovepdf.com/img/favicons-pdf/favicon-32x32.png",
+    "description": "在线 PDF 工具，支持合并、拆分、压缩、格式转换、编辑、添加水印与 OCR。",
+    "category": "PDF 工具",
+    "order": 10
+  }
+]
