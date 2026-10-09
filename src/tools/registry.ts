@@ -12,6 +12,36 @@ export interface InternalTool {
 
 export const internalTools: InternalTool[] = [
   {
+    id: 'regex', name: '正则表达式测试', icon: '.*', category: '开发工具',
+    description: '使用 JavaScript 引擎测试正则，查看匹配、捕获组与常用示例。',
+    path: '/tools/regex', component: () => import('./regex/RegexTool.vue'),
+  },
+  {
+    id: 'xml', name: 'XML 格式化 / 校验', icon: '</>', category: '开发工具',
+    description: '格式化、压缩和检查 XML 语法，保留混合文本与注释。',
+    path: '/tools/xml', component: () => import('./xml/XmlTool.vue'),
+  },
+  {
+    id: 'html', name: 'HTML 格式化', icon: 'H5', category: '开发工具',
+    description: '格式化 HTML5 文档与片段，支持 2 或 4 空格缩进。',
+    path: '/tools/html', component: () => import('./html/HtmlTool.vue'),
+  },
+  {
+    id: 'markdown', name: 'Markdown 编辑 / 预览', icon: 'M↓', category: '文本工具',
+    description: '手动编辑 Markdown 并实时预览，支持标准语法与表格、任务列表。',
+    path: '/tools/markdown', component: () => import('./markdown/MarkdownTool.vue'),
+  },
+  {
+    id: 'qrcode', name: '二维码生成', icon: '▦', category: '编码转换',
+    description: '生成二维码，设置尺寸、颜色和码点形状，下载 PNG 或 SVG。',
+    path: '/tools/qrcode', component: () => import('./qrcode/QrcodeTool.vue'),
+  },
+  {
+    id: 'password', name: '密码生成器', icon: '※', category: '安全工具',
+    description: '通过加密随机数生成密码，可设置长度、字符类型和排除易混淆字符。',
+    path: '/tools/password', component: () => import('./password/PasswordTool.vue'),
+  },
+  {
     id: 'json', name: 'JSON 格式化 / 校验', icon: '{ }', category: '开发工具',
     description: '格式化、压缩和校验 JSON，支持 2 或 4 空格缩进。',
     path: '/tools/json', component: () => import('./json/JsonTool.vue'),
