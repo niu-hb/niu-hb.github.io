@@ -12,6 +12,11 @@ export interface InternalTool {
 
 export const internalTools: InternalTool[] = [
   {
+    id: 'todo', name: '待办事项', icon: '✓', category: '生活工具',
+    description: '录入与编辑待办，按状态配色，一键切换、筛选与删除，自动本地保存。',
+    path: '/tools/todo', component: () => import('./todo/TodoTool.vue'),
+  },
+  {
     id: 'what-to-eat', name: '今天吃什么', icon: '♨', category: '趣味工具',
     description: '按口味、地区和类别筛选餐食，添加自己的菜单，让随机抽选决定吃什么。',
     path: '/tools/what-to-eat', component: () => import('./what-to-eat/WhatToEatTool.vue'),
