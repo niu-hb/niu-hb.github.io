@@ -12,6 +12,11 @@ export interface InternalTool {
 
 export const internalTools: InternalTool[] = [
   {
+    id: 'digest', name: '摘要算法', icon: '#', category: '开发工具',
+    description: '计算文本或文件的 MD、SHA、BLAKE、SM3 等摘要，支持多算法和校验值复制。',
+    path: '/tools/digest', component: () => import('./digest/DigestTool.vue'),
+  },
+  {
     id: 'barcode', name: '条形码生成', icon: '▥', category: '编码转换',
     description: '生成 CODE128、EAN、UPC 等条形码，调整尺寸，下载 SVG 或 PNG。',
     path: '/tools/barcode', component: () => import('./barcode/BarcodeTool.vue'),

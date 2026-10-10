@@ -10,6 +10,7 @@
 
 | 工具（详细说明） | 简要说明 | 访问地址 |
 | --- | --- | --- |
+| [摘要算法](src/tools/digest/README.md) | 计算文本或文件摘要，支持多种算法 | [`/#/tools/digest`](https://niu-hb.github.io/#/tools/digest) |
 | [条形码生成](src/tools/barcode/README.md) | 生成常见条形码，下载 SVG / PNG | [`/#/tools/barcode`](https://niu-hb.github.io/#/tools/barcode) |
 | [Cron 表达式生成 / 测试](src/tools/cron/README.md) | 按工具方言生成、校验并预览执行时间 | [`/#/tools/cron`](https://niu-hb.github.io/#/tools/cron) |
 | [趣味抽签](src/tools/lottery/README.md) | 多种抽签模式、分组和结果记录 | [`/#/tools/lottery`](https://niu-hb.github.io/#/tools/lottery) |
