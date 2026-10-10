@@ -1,77 +1,40 @@
 # 个人工具站
 
-一个基于 Vue 3 的日常工具站，集中展示站内工具与第三方网站。站内工具在浏览器本地处理输入，无需登录。
+基于 Vue 3 的日常工具站，提供站内工具和第三方网站入口。站内工具在浏览器本地处理输入，无需登录；主页支持搜索、分类筛选和桌面 / 手机布局。
 
 主页：[niu-hb.github.io](https://niu-hb.github.io/#/)
 
-## 支持的工具类型与清单
+## 工具清单
 
-| 类型 | 工具 | 功能 | 地址 |
-| --- | --- | --- | --- |
-| 编码转换 | 条形码生成 | 六种编码格式、尺寸与内容文字设置、校验位检查、SVG / PNG 下载 | [打开](https://niu-hb.github.io/#/tools/barcode) |
-| 开发工具 | Cron 表达式 | 5/6/7 段、Linux / node-cron / Spring / Quartz 方言、分段生成、校验与执行时间预览 | [打开](https://niu-hb.github.io/#/tools/cron) |
-| 趣味工具 | 趣味抽签 | 转盘 / 翻牌 / 滚动 / 签筒、分组管理、抽取数量、重复规则、顺序记录与本地保存 | [打开](https://niu-hb.github.io/#/tools/lottery) |
-| 生活工具 | 待办事项 | 录入与编辑、三种状态配色、状态按钮切换、筛选、删除、自动本地保存 | [打开](https://niu-hb.github.io/#/tools/todo) |
-| 趣味工具 | 今天吃什么 | 口味 / 地区 / 类别多选、候选计数、自定义菜单、随机抽选动画 | [打开](https://niu-hb.github.io/#/tools/what-to-eat) |
-| 开发工具 | 正则表达式测试 | JavaScript 引擎，匹配高亮、位置、捕获组、常用示例与超时终止 | [打开](https://niu-hb.github.io/#/tools/regex) |
-| 开发工具 | XML 格式化 / 校验 | 2/4 空格缩进、压缩、XML 语法检查 | [打开](https://niu-hb.github.io/#/tools/xml) |
-| 开发工具 | HTML 格式化 | HTML5 文档及片段，2/4 空格缩进 | [打开](https://niu-hb.github.io/#/tools/html) |
-| 文本工具 | Markdown 编辑 / 预览 | 手动编辑、实时预览，CommonMark 基础语法及表格、删除线、任务列表 | [打开](https://niu-hb.github.io/#/tools/markdown) |
-| 编码转换 | 二维码生成 | 尺寸、颜色、码点与定位角样式、纠错级别、PNG/SVG 下载 | [打开](https://niu-hb.github.io/#/tools/qrcode) |
-| 安全工具 | 密码生成器 | 加密随机数，长度、字符类型、排除易混淆字符 | [打开](https://niu-hb.github.io/#/tools/password) |
-| 开发工具 | JSON 格式化 / 校验 | 2/4 空格缩进、压缩、语法校验、复制结果 | [打开](https://niu-hb.github.io/#/tools/json) |
-| 时间工具 | 时间 / 时间戳 | 当前本地与 UTC 时间，秒/毫秒时间戳，日期互转 | [打开](https://niu-hb.github.io/#/tools/time) |
-| 编码转换 | URL 编解码 | 完整 URL 与参数值两种模式 | [打开](https://niu-hb.github.io/#/tools/url) |
-| 编码转换 | Base64 编解码 | UTF-8 文本，标准与 URL-safe Base64 | [打开](https://niu-hb.github.io/#/tools/base64) |
-| 文本工具 | 字符统计 | 总字符、中文、英文、数字、普通空格、其他空白、其他字符 | [打开](https://niu-hb.github.io/#/tools/characters) |
-| 文本工具 | 文本对比 | 合并 / 左右拆分视图，按行显示差异与双侧行号 | [打开](https://niu-hb.github.io/#/tools/diff) |
-| 学习工具 | 田字格生成 | A4 预览，行列、虚线、颜色、描红，打印 / 保存 PDF | [打开](https://niu-hb.github.io/#/tools/tian-grid) |
-| PDF 工具（第三方） | iLovePDF | 在线 PDF 合并、拆分、压缩、格式转换、编辑、水印与 OCR | [打开](https://www.ilovepdf.com/zh-cn) |
+点击工具名称查看详细说明，点击访问地址使用工具。
 
-主页支持名称、描述、分类搜索和分类筛选，适配桌面与手机。
+| 工具（详细说明） | 简要说明 | 访问地址 |
+| --- | --- | --- |
+| [条形码生成](src/tools/barcode/README.md) | 生成常见条形码，下载 SVG / PNG | [`/#/tools/barcode`](https://niu-hb.github.io/#/tools/barcode) |
+| [Cron 表达式生成 / 测试](src/tools/cron/README.md) | 按工具方言生成、校验并预览执行时间 | [`/#/tools/cron`](https://niu-hb.github.io/#/tools/cron) |
+| [趣味抽签](src/tools/lottery/README.md) | 多种抽签模式、分组和结果记录 | [`/#/tools/lottery`](https://niu-hb.github.io/#/tools/lottery) |
+| [待办事项](src/tools/todo/README.md) | 编辑待办、切换状态并本地保存 | [`/#/tools/todo`](https://niu-hb.github.io/#/tools/todo) |
+| [今天吃什么](src/tools/what-to-eat/README.md) | 筛选餐食或自定义菜单，随机抽选 | [`/#/tools/what-to-eat`](https://niu-hb.github.io/#/tools/what-to-eat) |
+| [正则表达式测试](src/tools/regex/README.md) | 测试匹配、捕获组与常用示例 | [`/#/tools/regex`](https://niu-hb.github.io/#/tools/regex) |
+| [XML 格式化 / 校验](src/tools/xml/README.md) | 格式化、压缩并检查 XML 语法 | [`/#/tools/xml`](https://niu-hb.github.io/#/tools/xml) |
+| [HTML 格式化](src/tools/html/README.md) | 格式化 HTML5 文档与片段 | [`/#/tools/html`](https://niu-hb.github.io/#/tools/html) |
+| [Markdown 编辑 / 预览](src/tools/markdown/README.md) | 编辑源码、实时预览并手动保存 | [`/#/tools/markdown`](https://niu-hb.github.io/#/tools/markdown) |
+| [二维码生成](src/tools/qrcode/README.md) | 设置尺寸与样式，下载 PNG / SVG | [`/#/tools/qrcode`](https://niu-hb.github.io/#/tools/qrcode) |
+| [密码生成器](src/tools/password/README.md) | 设置长度与字符类型，随机生成密码 | [`/#/tools/password`](https://niu-hb.github.io/#/tools/password) |
+| [JSON 格式化 / 校验](src/tools/json/README.md) | 格式化、压缩并校验 JSON | [`/#/tools/json`](https://niu-hb.github.io/#/tools/json) |
+| [时间 / 时间戳](src/tools/time/README.md) | 查看时间，转换秒或毫秒时间戳 | [`/#/tools/time`](https://niu-hb.github.io/#/tools/time) |
+| [URL 编解码](src/tools/url/README.md) | 转换完整网址或单个参数值 | [`/#/tools/url`](https://niu-hb.github.io/#/tools/url) |
+| [Base64 编解码](src/tools/base64/README.md) | 转换 UTF-8 文本与两种 Base64 格式 | [`/#/tools/base64`](https://niu-hb.github.io/#/tools/base64) |
+| [字符统计](src/tools/characters/README.md) | 统计总字符及各类字符数量 | [`/#/tools/characters`](https://niu-hb.github.io/#/tools/characters) |
+| [文本对比](src/tools/diff/README.md) | 按行对比，支持合并与左右视图 | [`/#/tools/diff`](https://niu-hb.github.io/#/tools/diff) |
+| [田字格生成](src/tools/tian-grid/README.md) | 生成 A4 练习纸，打印或保存 PDF | [`/#/tools/tian-grid`](https://niu-hb.github.io/#/tools/tian-grid) |
+| iLovePDF（第三方） | 在线 PDF 合并、拆分与转换等 | [www.ilovepdf.com](https://www.ilovepdf.com/zh-cn) |
 
-站内工具免费使用。第三方网站在新标签页打开，其功能限制及收费规则以对应网站为准。
-
-### 统计与转换规则
-
-- JSON 使用标准 `JSON.parse` / `JSON.stringify`；大于 JavaScript 安全整数范围的数字可能损失精度，建议用字符串保存。
-- 时间来自设备时钟，每秒刷新；时间戳明确选择秒或毫秒，不按位数猜测。日期输入为 `YYYY-MM-DD HH:mm:ss[.SSS]`，按本地时区或 UTC 解释，拒绝无效日期。夏令时重复时段采用浏览器较早时间；秒结果向下取整。
-- URL 参数值对应 `encodeURIComponent` / `decodeURIComponent`，完整网址对应 `encodeURI` / `decodeURI`；完整模式保留 `/ ? & = #` 等结构，中文和空格会被编码，纯英文网址可能不变。`+` 不自动转换为空格。
-- Base64 仅处理 UTF-8 文本，支持中文与表情；不是加密。URL-safe 编码将 `+` 换成 `-`、`/` 换成 `_`，去掉末尾 `=`；解码接受省略或完整填充。标准解码要求完整填充；解码忽略空白，拒绝非法格式、填充位及无效 UTF-8。
-- 文本对比按行计算共同内容；修改表示为删除旧行、新增新行。保留空格、空行和末尾换行差异，统一 CRLF / CR / LF；不是逐字符高亮。两段文本合计上限 200,000 个 UTF-16 单元，行数矩阵上限 1,000,000 个单元，超限提示分段处理。
-- 字符统计按 Unicode 码点计数，CRLF 按一个换行计算。中文为 Han 字符，英文为 A–Z/a–z，数字为 0–9，普通空格为半角空格；其他空白含换行、制表符和全角空格。分类互斥，组合表情可能包含多个码点。
-
-### 田字格生成与打印
-
-田字格参考提供的 A4 生成器：实时更新预览，每行输入对应一行格子，空文本生成空白纸。支持 1–20 行、1–15 列，文字按 Unicode 码点放入方格；超出行列时明确提示未显示内容。描红模式使用浅灰文字和虚线。打印使用 A4、100% 缩放、关闭页眉页脚，可在浏览器打印对话框保存 PDF；字体取决于设备是否安装楷体。一次生成一页。
-
-### 新增工具规则与限制
-
-条形码支持 CODE128、CODE39、EAN13、EAN8、UPC、ITF，内容最多 80 字符；按格式限制字母与数字，拒绝空内容及非法校验位。EAN/UPC 可省略最后一位自动补齐。条宽 1–4 px、条高 40–200 px，可隐藏内容文字，预览保留静区并允许横向滚动。SVG / PNG 按实际尺寸下载，打印时保持比例并用扫描设备验证。
-
-Cron 按实际工具区分方言，字段数不是语言标准：5 段 Linux crontab（Vixie/Cronie，操作系统工具，与语言无关）；5/6 段 node-cron 4.2.1（Node.js，JavaScript/TypeScript）；6 段 Spring Framework 5.3+ CronExpression / @Scheduled（Java/JVM）；6/7 段 Quartz Java CronTrigger，最后一段年可选。5 段为分、时、日、月、星期；6 段前置秒；7 段最后增加年，命令与用户名不算时间字段。页面提供规则对照和官方链接。
-
-Linux 的日与星期同时受限时采用或规则，任一日字段以 * 开头时采用且规则；node-cron 与 Spring 必须同时满足日和星期。前三者星期 0/7 为周日，Quartz 星期 1 为周日，日和星期有且仅有一个使用 `?`；Spring 的 `?` 等价于通配符。生成、校验和执行时间预览共用方言规则，用户输入的非法字段不会自动改写。Spring/Quartz 支持特殊日期与 L-n，Linux/Spring 支持常用时间宏；node-cron 4.2.1 不接受这些扩展，步长使用 */n 或 a-b/n。
-
-工具预览限 1970–2099 年、# 序号 1–5、L-n 偏移 Quartz 0–30 / Spring 1–30，不预览跨月偏移；Quartz 特殊日期不与列表混合。不支持随机 H、C、@reboot、命令部分、多条表达式或调度器 misfire/停机补偿策略，不承诺覆盖其他版本及其他 cron 库的全部扩展。
-
-测试起点按 UTC 输入，执行时间按所选 IANA 时区计算并展示偏移，最多预览 20 次、搜索未来 10 年。计算在独立 Worker 中进行，超过步数限制或两秒会停止。两个工具均在浏览器本地处理，不上传输入；Cron 工具不创建或执行定时任务。新增公开路由 `/#/tools/barcode` 与 `/#/tools/cron`，功能依赖分别为精确锁定的 JsBarcode 与 cronjs。
-
-- 趣味抽签：提供“添加周末示例”按钮，一次添加“周末去干嘛”及 8 个活动候选并保存；已有同名组时仅查看，不重复创建或覆盖已编辑的项目与记录。支持幸运转盘、翻牌揭晓、滚动抽选、签筒摇签四种模式，使用浏览器加密随机数并拒绝取模偏差，各候选等概率。转盘每次固定 1 项，其余模式每次 1–20 项；允许重复时每次抽取后放回，同轮可出现重复，不允许重复时仅排除当前分组当前模式的历史已抽项目，候选不足会提示减少数量。支持最多 20 个分组，名称 1–30 个 Unicode 字符；各组独立维护候选，每行一项、最多 100 个非空行、每项 50 个 Unicode 字符、总文本最多 10,000 个字符，同名候选规范化去重。编辑候选保留历史结果快照，同名项目重新加入后仍受历史不重复规则约束。PC 历史记录位于右侧，手机位于抽签区域下方，仅展示当前模式结果，并按该模式轮次及轮内顺序显示；模式切换不删除存档，各模式的候选池、抽取数量、重复设置与历史轮次独立。卡牌开始后持续旋转，再逐张停止翻面揭晓，结果文字放大，转盘采用明亮彩色扇区与灯环；滚动抽选的抽奖机两侧留白居中，可点击以底部为支点向下倾斜的拉杆启动，滚轮从上向下滚动并依序停在结果上；摇签完成自动打开结果弹窗，按序展示带入场动画的幸运签。结果按轮次及轮内抽取顺序追加保存，每组每种模式最多 100 轮，不自动删除历史；点击“重新开始”或“清空当前记录”并确认，仅清空当前分组当前模式的记录与本轮结果、保留候选项目，并恢复不重复候选，删除分组移除该组全部内容，两者均需页面内二次确认。存档使用独立 localStorage 键，保存失败时操作不生效，不覆盖其他工具；结果先保存再播放动画，刷新或离开仍保留记录。系统减少动态效果设置下直接揭晓。数据不上传、不跨设备同步，多个标签页修改以最后保存为准。新增公开路由 `/#/tools/lottery`，无需新增依赖。
-- 待办事项：每条最多 500 个 Unicode 字符，最多 1,000 条，拒绝空白内容；新增事项默认待处理，通过分段状态按钮切换进行中或已完成，分别使用暖黄、蓝色、绿色卡片与状态标签区分，完成内容显示删除线；支持状态筛选和删除。历史事项可行内编辑，保存后保留原标识、状态与排序，取消或 Esc 放弃草稿；非法输入或保存失败时保留编辑草稿与原存档。每次操作自动保存到当前浏览器的 localStorage，保存失败时操作不生效并显示错误，输入保留以便重试。重新进入或刷新页面恢复存档；非法存档不会被自动覆盖，可重新读取或明确放弃原存档重新开始。不上传、不跨浏览器或设备同步；清除网站数据会删除待办，多个标签页同时修改以最后保存为准。新增公开路由 `/#/tools/todo`，无需额外依赖。
-- 今天吃什么：内置 120 道餐食（56 道家常菜、33 道主食、17 道小吃、9 道汤粥、5 道甜品），覆盖米饭、面条、米粉及炒、蒸、煮、炖等日常选择，独立数据位于 `src/tools/what-to-eat/menu.json`，每项包含名称、风味地区、口味、类别及资料来源。地区不代表唯一发源地，口味为人工整理的参考标签；可在页面展开资料来源查看参考网站。同维度多选取并集，不同维度取交集，实时显示符合条件的内置数量及最终候选数量。支持内置、仅自定义、内置 + 自定义三种来源；手工输入每行一项，最多 100 行、每项 50 个 Unicode 字符、总计 10,000 个 UTF-16 单元。自定义选项不受内置筛选影响，按名称去重后加入候选；不会因重复输入增加概率。点击“保存菜单”将自定义文本存入当前浏览器，重新进入页面时恢复，不上传菜单；仅手动保存时覆盖旧内容，清空后再次保存可清除存档。浏览器随机数拒绝取模偏差，每项等概率，滚动减速与彩纸仅用于展示，系统减少动态效果设置或单候选时直接揭晓。新增公开路由 `/#/tools/what-to-eat`，无需额外依赖。
-- 正则采用当前浏览器的 JavaScript 引擎，表达式无需两侧 `/`；支持 g/i/m/s/u/y，位置按从 0 开始的 UTF-16 单元计算。常用示例通过页面内可展开的按钮列表选择，可随页面滚动。表达式上限 10,000 字符、文本上限 200,000 字符，最多展示 1,000 项；独立 Worker 超过 2 秒会终止。示例中的邮箱、网址用于常见提取，不替代完整业务校验。
-- XML 检查格式是否良好，不做 XSD/DTD 校验，不接受 DOCTYPE。格式化/压缩保留注释、CDATA、混合文本及 `xml:space="preserve"`；含文本的子树保持原布局，压缩不保证去掉所有换行。最多 200,000 字符、100 层嵌套。
-- HTML5 与 XML 的标签、属性规则不同，因此使用单独页面。HTML 格式化按元素默认显示方式换行缩进，保留 `pre` 与行内文本的有意义空白；自定义 CSS 改变元素显示方式时需检查空白效果。只处理源码，不执行脚本或加载资源；内嵌 JavaScript/CSS 保留，不处理 Vue/JSX 模板。最多 200,000 字符，格式化不等于完整 HTML 规范校验。
-- Markdown 支持源码手动编辑与实时预览，桌面双栏、手机切换。按 CommonMark 基础规则处理并支持表格、删除线、任务列表，内置示例只展示已支持的语法；原始 HTML 显示为文本，外部链接和图片只允许 HTTP/HTTPS，外部图片默认不加载，主动启用才访问图片地址。暂不提供所见即所得编辑、代码着色、数学公式、Mermaid、脚注或自动标题锚点；最多 100,000 字符，点击“保存源码”手动保存到当前浏览器并在重新进入时恢复，不自动保存；清空后再次保存可清除存档，图片加载设置不保存。
-- 二维码整体为常规方形，支持方形/圆点/圆角码点及定位角样式。尺寸 128–1024 px，内容最多 2,000 UTF-8 字节；纠错越高容量越低。保留至少四模块留白，提示低对比颜色；复杂内容建议增大尺寸，导出后实际扫码确认。PNG/SVG 下载不访问输入的网址。
-- 密码长度 1–128，选中类型至少各出现一次，长度不能小于类型数量。符号仅使用 `!@#$%^&*_-`，不含引号、括号、斜杠或空格；不同网站允许的符号范围可能不同，应按目标网站规则选择是否启用符号。使用 `crypto.getRandomValues`、拒绝取模偏差并整体拒绝采样；可排除 `I l 1 O 0 o`。密码仅在页面内存显示，修改设置清空旧结果，不保存、不上传。
-
-功能依赖均精确锁定并按工具路由懒加载：XML 使用浏览器标准 `DOMParser`/`XMLSerializer`，HTML 使用 Prettier 浏览器版及 HTML 插件，Markdown 使用 `markdown-it` 和任务列表插件并通过 Vue 节点渲染，二维码使用 `qr-code-styling`。二维码选择 1.6.0，以避免较新版本声明引入 Node 原生 canvas/jsdom 类型依赖，显式转换 UTF-8 字节以支持中文与表情；保留严格类型检查。新增工具测试使用 jsdom 验证浏览器 XML 解析行为。
+站内工具免费使用。第三方网站在新标签页打开，其功能限制与收费规则以对应网站为准。使用本地保存的工具不会跨设备同步；清除网站数据会删除存档。Markdown 外部图片需主动启用加载，第三方图标会访问对应图片网站。
 
 ## 本地开发
 
-技术栈：Vue 3、Vite、TypeScript、Vue Router 4、Element Plus、pnpm。使用 `.node-version` 中的 Node 22.23.1，pnpm 版本由 `package.json` 的 `packageManager` 固定。
+技术栈：Vue 3、Vite、TypeScript、Vue Router 4、Element Plus、pnpm。Node 版本以 [`.node-version`](.node-version) 为准，pnpm 版本由 [`package.json`](package.json) 的 `packageManager` 固定。
 
 ```sh
 corepack enable
@@ -91,13 +54,13 @@ pnpm lint
 pnpm preview
 ```
 
-`typecheck` 同时运行 `tsc --noEmit` 与 `vue-tsc --noEmit`。Vitest 覆盖核心工具逻辑和外链配置校验。
+`typecheck` 同时运行 `tsc --noEmit` 与 `vue-tsc --noEmit`。Vitest 覆盖工具逻辑、部分页面交互和外链配置校验。
 
-Element Plus 固定为 2.11.8。`@types/web-bluetooth`、`@types/w3c-screen-orientation`、`csstype`、`type-fest` 和与 Vue 同版本的 `@vue/runtime-core` 用于组件库声明检查；`src/types/element-plus.d.ts` 将旧类型名称映射为 Vue/CSS 标准类型并补齐 Vue 标准 JSX 属性，`src/env.d.ts` 将旧屏幕方向类型名称映射到标准声明。项目保留严格检查，不跳过依赖声明检查。升级组件库时同步复查这些兼容声明是否仍需要。
+Element Plus 按需导入，依赖版本精确锁定。项目保留严格类型检查；升级组件库时复查 [`src/types/element-plus.d.ts`](src/types/element-plus.d.ts) 和 [`src/env.d.ts`](src/env.d.ts) 中的兼容声明。
 
 ## 配置第三方网站
 
-编辑 `src/config/external-tools.json`，当前已收录 iLovePDF，名称、功能介绍及图标来自其官方网站。以下仅为配置格式示例，不是已收录网站：
+编辑 `src/config/external-tools.json`，当前已收录 iLovePDF，配置集中维护名称、功能介绍、链接和图标。以下仅为配置格式示例，不是已收录网站：
 
 ```json
 [
@@ -123,13 +86,13 @@ Element Plus 固定为 2.11.8。`@types/web-bluetooth`、`@types/w3c-screen-orie
 | `category` | 必填，主页分类名称 |
 | `order` | 可选，有限数字；数值越小越靠前，省略时使用数组索引 |
 
-修改后推送到 `main` 即可重新构建发布。配置错误会在主页提示，测试也会阻止错误配置发布。第三方网站在新标签页打开；外部图标加载会访问对应图片网站。
+修改后推送到 `main` 即可重新构建发布。配置校验失败时，主页提示错误并停止展示第三方清单；站内工具仍可使用。配置校验测试用于阻止错误配置发布。
 
 ## 添加站内工具
 
-1. 在 `src/tools/<工具标识>/` 新建页面和 `logic.ts`。
+1. 在 `src/tools/<工具标识>/` 新建页面和 `logic.ts`，编写模块 `README.md` 说明用法与限制。
 2. 在 `src/tools/registry.ts` 添加名称、描述、分类、路径、图标和懒加载组件。主页与路由共用此注册表。
-3. 为处理逻辑补充 Vitest 测试，更新本文件的清单，执行全部验证命令。
+3. 为处理逻辑补充 Vitest 测试，更新本文件的工具清单、模块说明链接和访问地址，执行全部验证命令。
 
 ## 自动发布
 
@@ -150,7 +113,7 @@ src/
   components/   通用文本工作台
   config/       第三方 JSON 配置、校验与测试
   router/       Hash 路由
-  tools/        注册表、工具页面、处理逻辑与测试
+  tools/        注册表、工具页面、逻辑、测试与模块说明
   views/        首页与未找到页面
   styles/       全局响应式样式
 .github/workflows/ 自动检查与发布
