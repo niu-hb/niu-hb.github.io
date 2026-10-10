@@ -12,6 +12,11 @@ export interface InternalTool {
 
 export const internalTools: InternalTool[] = [
   {
+    id: 'lottery', name: '趣味抽签', icon: '✦', category: '趣味工具',
+    description: '转盘、翻牌、滚动与签筒抽选，分组维护项目，设置数量与重复规则，按顺序记录结果。',
+    path: '/tools/lottery', component: () => import('./lottery/LotteryTool.vue'),
+  },
+  {
     id: 'todo', name: '待办事项', icon: '✓', category: '生活工具',
     description: '录入与编辑待办，按状态配色，一键切换、筛选与删除，自动本地保存。',
     path: '/tools/todo', component: () => import('./todo/TodoTool.vue'),

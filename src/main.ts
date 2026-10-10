@@ -6,6 +6,7 @@ import 'element-plus/theme-chalk/el-button.css'
 import 'element-plus/theme-chalk/el-input.css'
 import 'element-plus/theme-chalk/el-select.css'
 import 'element-plus/theme-chalk/el-option.css'
+import 'element-plus/es/components/dialog/style/css.mjs'
 // 使用组件样式入口，同时加载颜色面板等内部组件的必要样式。
 import 'element-plus/es/components/input-number/style/css.mjs'
 import 'element-plus/es/components/checkbox/style/css.mjs'
