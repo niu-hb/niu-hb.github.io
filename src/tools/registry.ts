@@ -12,6 +12,11 @@ export interface InternalTool {
 
 export const internalTools: InternalTool[] = [
   {
+    id: 'cipher', name: '加密 / 解密', icon: '⇄', category: '安全工具',
+    description: '在浏览器本地使用 AES 或 RSA 加解密文本，生成随机密钥，转换 Hex / Base64 密文。',
+    path: '/tools/cipher', component: () => import('./cipher/CipherTool.vue'),
+  },
+  {
     id: 'digest', name: '摘要算法', icon: '#', category: '开发工具',
     description: '计算文本或文件的 MD、SHA、BLAKE、SM3 等摘要，支持多算法和校验值复制。',
     path: '/tools/digest', component: () => import('./digest/DigestTool.vue'),
