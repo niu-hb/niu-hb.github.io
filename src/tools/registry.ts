@@ -12,6 +12,16 @@ export interface InternalTool {
 
 export const internalTools: InternalTool[] = [
   {
+    id: 'barcode', name: '条形码生成', icon: '▥', category: '编码转换',
+    description: '生成 CODE128、EAN、UPC 等条形码，调整尺寸，下载 SVG 或 PNG。',
+    path: '/tools/barcode', component: () => import('./barcode/BarcodeTool.vue'),
+  },
+  {
+    id: 'cron', name: 'Cron 表达式生成 / 测试', icon: '⏱', category: '开发工具',
+    description: '按 Linux、node-cron、Spring、Quartz 方言生成和校验 5/6/7 段表达式，预览执行时间。',
+    path: '/tools/cron', component: () => import('./cron/CronTool.vue'),
+  },
+  {
     id: 'lottery', name: '趣味抽签', icon: '✦', category: '趣味工具',
     description: '转盘、翻牌、滚动与签筒抽选，分组维护项目，设置数量与重复规则，按顺序记录结果。',
     path: '/tools/lottery', component: () => import('./lottery/LotteryTool.vue'),

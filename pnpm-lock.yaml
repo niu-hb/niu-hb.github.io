@@ -8,9 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@datasert/cronjs-matcher':
+        specifier: 1.4.0
+        version: 1.4.0
+      '@datasert/cronjs-parser':
+        specifier: 1.4.0
+        version: 1.4.0
       element-plus:
         specifier: 2.11.8
         version: 2.11.8(vue@3.5.43(typescript@5.9.3))
+      jsbarcode:
+        specifier: 3.12.3
+        version: 3.12.3
       markdown-it:
         specifier: 15.0.2
         version: 15.0.2
@@ -132,6 +141,12 @@ packages:
   '@ctrl/tinycolor@3.6.1':
     resolution: {integrity: sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==}
     engines: {node: '>=10'}
+
+  '@datasert/cronjs-matcher@1.4.0':
+    resolution: {integrity: sha512-5wAAKYfClZQDWjOeGReEnGLlBKds5K0CitnTv17sH32X4PSuck1dysX71zzCgrm0JCSpobDNg4b292ewhoy6ww==}
+
+  '@datasert/cronjs-parser@1.4.0':
+    resolution: {integrity: sha512-zHGlrWanS4Zjgf0aMi/sp/HTSa2xWDEtXW9xshhlGf/jPx3zTIqfX14PZnoFF7XVOwzC49Zy0SFWG90rlRY36Q==}
 
   '@element-plus/icons-vue@2.3.2':
     resolution: {integrity: sha512-OzIuTaIfC8QXEPmJvB4Y4kw34rSXdCJzxcD1kFStBvr8bK6X1zQAYDo0CNMjojnfTqRQCJ0I7prlErcoRiET2A==}
@@ -804,6 +819,9 @@ packages:
     resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
 
+  jsbarcode@3.12.3:
+    resolution: {integrity: sha512-CuHU9hC6dPsHF5oVFMo8NW76uQVjH4L22CsP4hW+dNnGywJHC/B0ThA1CTDVLnxKLrrpYdicBLnd2xsgTfRnvg==}
+
   jsdom@26.1.0:
     resolution: {integrity: sha512-Cvc9WUhxSMEo4McES3P7oK3QaXldCfNWp7pl2NNeiIFlCoLr3kfq9kb1fxftiwk1FLV7CvpvDfonxtzUDeSOPg==}
     engines: {node: '>=18'}
@@ -928,6 +946,10 @@ packages:
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
+
+  luxon@3.7.2:
+    resolution: {integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==}
+    engines: {node: '>=12'}
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -1390,6 +1412,13 @@ snapshots:
   '@csstools/css-tokenizer@3.0.4': {}
 
   '@ctrl/tinycolor@3.6.1': {}
+
+  '@datasert/cronjs-matcher@1.4.0':
+    dependencies:
+      '@datasert/cronjs-parser': 1.4.0
+      luxon: 3.7.2
+
+  '@datasert/cronjs-parser@1.4.0': {}
 
   '@element-plus/icons-vue@2.3.2(vue@3.5.43(typescript@5.9.3))':
     dependencies:
@@ -2071,6 +2100,8 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
+  jsbarcode@3.12.3: {}
+
   jsdom@26.1.0:
     dependencies:
       cssstyle: 4.6.0
@@ -2183,6 +2214,8 @@ snapshots:
   lodash@4.18.1: {}
 
   lru-cache@10.4.3: {}
+
+  luxon@3.7.2: {}
 
   magic-string@0.30.21:
     dependencies:
