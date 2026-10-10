@@ -36,7 +36,7 @@ const filteredTools = computed(() => tools.filter(tool =>
       </p>
       <h1>日常所需，<br><span>一站直达。</span></h1>
       <div class="hero-description">
-        <p>这是我的个人工具站，收录常用的文本、编码、时间和学习工具。</p>
+        <p>这是我的个人工具站，收录开发、文本、编码、时间、学习、安全与趣味工具。</p>
         <p>站内工具在浏览器本地处理输入；第三方网站通过链接在新标签页打开。</p>
       </div>
       <div class="hero-meta">

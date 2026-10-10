@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref, watch } from 'vue'
 import { ElButton } from 'element-plus/es/components/button/index'
 import { ElInput } from 'element-plus/es/components/input/index'
 import { ElCheckbox } from 'element-plus/es/components/checkbox/index'
 import { markdownExample, renderMarkdown } from './logic'
+import { useLocalText } from '../useLocalText'
 
-const input = ref('')
+const { text: input, storageFeedback, storageError, saveText } = useLocalText('toolbox:markdown-source:v1', 100000)
 const loadImages = ref(false)
 const mobileView = ref<'edit' | 'preview'>('edit')
 const feedback = ref('')
+watch(input, () => { feedback.value = '' })
 const preview = computed(() => {
   try {
     return { node: renderMarkdown(input.value, loadImages.value), error: '' }
@@ -37,6 +39,12 @@ async function copy(): Promise<void> {
       </ElButton>
       <ElButton @click="input = ''; feedback = ''">
         清空
+      </ElButton>
+      <ElButton
+        :disabled="!!preview.error"
+        @click="saveText"
+      >
+        保存源码
       </ElButton>
       <ElButton
         :disabled="!input"
@@ -104,6 +112,20 @@ async function copy(): Promise<void> {
       {{ preview.error }}
     </p>
     <p
+      v-if="storageError"
+      class="error-message"
+      role="alert"
+    >
+      {{ storageError }}
+    </p>
+    <p
+      v-if="storageFeedback"
+      class="feedback"
+      role="status"
+    >
+      {{ storageFeedback }}
+    </p>
+    <p
       v-if="feedback"
       class="feedback"
       role="status"
@@ -114,6 +136,7 @@ async function copy(): Promise<void> {
       <p>按 CommonMark 规则解析标题、段落、强调、引用、列表、链接、图片、行内代码和代码块，并补充表格、删除线、任务列表。普通换行按标准规则处理，行尾两个空格可强制换行。</p>
       <p>支持源码手动编辑与实时预览，不支持直接编辑预览。原始 HTML 显示为文本；外部链接和图片只允许 HTTP/HTTPS，外部图片默认不加载。内置示例只展示当前支持的语法。</p>
       <p>代码块保留文本，不提供语法着色；暂不支持数学公式、Mermaid、脚注或自动标题锚点。最多 100,000 字符，源码不自动保存。</p>
+      <p>点击“保存源码”将当前源码保存到当前浏览器，重新进入页面时恢复，只保留最近一次保存。清空后再次保存可清除已保存内容；清理浏览器网站数据也会删除保存内容。图片加载设置不保存。</p>
     </div>
   </section>
 </template>

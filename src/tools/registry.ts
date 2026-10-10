@@ -12,6 +12,11 @@ export interface InternalTool {
 
 export const internalTools: InternalTool[] = [
   {
+    id: 'what-to-eat', name: '今天吃什么', icon: '♨', category: '趣味工具',
+    description: '按口味、地区和类别筛选餐食，添加自己的菜单，让随机抽选决定吃什么。',
+    path: '/tools/what-to-eat', component: () => import('./what-to-eat/WhatToEatTool.vue'),
+  },
+  {
     id: 'regex', name: '正则表达式测试', icon: '.*', category: '开发工具',
     description: '使用 JavaScript 引擎测试正则，查看匹配、捕获组与常用示例。',
     path: '/tools/regex', component: () => import('./regex/RegexTool.vue'),
